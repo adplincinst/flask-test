@@ -9,10 +9,11 @@ fi
 let i=0
 let max=$1
 
+echo "start"
 while [ "$i" -lt $max  ]
 do
 time curl -s -i http://localhost:5009/status &
 let i=$i+1
 done
 wait
-
+echo "end"
